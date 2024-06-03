@@ -1,198 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Gaurav (Dhruv) Mahesh Goel</title>
-          <style>
-                        body {
-                            font-family: Arial, sans-serif;
-                            line-height: 1.6;
-                            margin: 0;
-                            padding: 0;
-                            background-color: #f5f5f5;
-                            color: #333;
-                        }
-                        header {
-                            background-color: #4caf50; /* Green background */
-                            color: #fff; /* White text */
-                            text-align: center;
-                            padding: 20px 0;
-                        }
-                        .container {
-                            max-width: 820px;
-                            margin: 0 auto;
-                            padding: 20px;
-                            background-color: #fff;
-                            border-radius: 8px;
-                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                        }
-                        h1 {
-                            margin-bottom: 10px;
-                        }
-                        p {
-                            font-size: 1.1em;
-                            text-align: justify;
-                            margin-bottom: 15px;
-                            color: #333; /* Dark text */
-                        }
-                        ul {
-                            margin-bottom: 15px;
-                            padding-left: 20px;
-                            color: #333; /* Dark text */
-                        }
-                        a {
-                            color: #4caf50; /* Green links */
-                            text-decoration: none;
-                        }
-                        a:hover {
-                            text-decoration: underline;
-                        }
-                    </style>
-          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-          <script id="MathJax-script" async
-                  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-          </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruv Goel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333333;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #004d40;
+            padding: 1em;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 2em;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-picture {
+            margin-left: 2em;
+        }
+        h1 {
+            color: #2e7d32;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2em auto;
+            padding: 1em;
+        }
+        p.big {
+            line-height: 1.5;
+        }
+        .section-style {
+            margin: 2em 0;
+        }
+        .section-style h2 {
+            color: #333333;
+        }
+    </style>
 </head>
 <body>
+    <div class="navbar">
+        <a href="index.html">Main</a>
+        <a href="cv.html">CV</a>
+        <a href="writings.html">Writings & Publications</a>
+        <a href="talks.html">Talks</a>
+        <a href="teaching.html">Teaching & Mentorship</a>
+        <a href="misc.html">Miscellaneous</a>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div>
+                <h1>Gaurav (Dhruv) Goel</h1>
+                <h2>he/they</h2>
+                <p class="big">Hello! I am Dhruv, and I am a graduate student in mathematics from Mumbai. I'm broadly interested in algebraic and differential geometry, although I have yet to find a subfield of math that I dislike!</p>
+                <p class="big">I did my undergraduate studies at <a href="https://www.math.harvard.edu/">Harvard</a>, where I was in <a href="https://lowell.harvard.edu/">Lowell House</a>. I wrote my <a href="writings.html#thesis">senior thesis</a> on applications of the Atiyah-Singer Index Theorem under the supervision of <a href="https://en.wikipedia.org/wiki/Joe_Harris_(mathematician)">Joe Harris</a> and <a href="https://people.math.harvard.edu/~dafr/">Dan Freed</a>.</p>
+                <p class="big">For the 2024-25 academic year, I will be at <a href="https://www.trin.cam.ac.uk/">Trinity College, Cambridge</a>, for Part III of the Mathematical Tripos.</p>
+                <p class="big">Outside of math, I like to <a href="misc.html#singing">sing</a>, <a href="misc.html#compositions">write music</a>, read (mostly sci-fi, high fantasy, and horror), and watch <a href="https://en.wikipedia.org/wiki/Black_Mirror">Black Mirror</a>.</p>
+                <p class="big">Please write to me at <a href="mailto:gauravgoel@college.harvard.edu"><tt>gauravgoel@college.harvard.edu</tt></a> or <a href="mailto:gmgoel@gmail.com"><tt>gmgoel@gmail.com</tt></a>.</p>
+                <p class="big">Collaboration Acknowledgment: This website was formatted with the help of ChatGPT-4. &#128516;</p>
+            </div>
+            <div class="profile-picture">
+                <img src="profile.jpg" alt="Profile Picture" style="max-width: 200px; border-radius: 50%;">
+            </div>
+        </div>
 
-  <header>
-    <h1>Gaurav (Dhruv) Mahesh Goel</h1>
-    <h2>he/they</h2>
-  </header>
-
-  <div class="container">
-    <center>
-    <img src="picture_goel.jpg" alt="Dhruv laughing; wearing flannel; fall foliage in the background" height="354" width="518" class = "center">
-    </center>
-    
-    <br>
-
-      I am an undergraduate studying Math and Germanic Studies at Harvard.
-      <br>
-      I am interested in algebraic and differential geometry.
-
-    <ul>
-      <li>My e-mail address is <a href="mailto:gauravgoel@college.harvard.edu">gauravgoel@college.harvard.edu</a>.</li>
-      <li>Here is my <a href="CV_Goel.pdf">CV</a> (updated November 2023).</li>
-    </ul>
-    
-    This website was formatted with the help of ChatGPT-3.5. :)
-    
-    <hr>
-    <h2>Writings</h2>
-        
-        <h3>Publications</h3>
-        <ol>
-            <li> On Powerful Integers Expressible as Sums of Two Coprime Fourth Powers (with <a href="https://people.math.harvard.edu/~elkies/">Noam D. Elkies</a>). <em>Res. Number Theory</em> <b>9</b>, 78 (2023) (proceedings of ANTS-XV 2022). <a href="https://doi.org/10.1007/s40993-022-00415-9">doi: 10.1007/s40993-022-00415-9</a>
-        </ol>
-        
-        <h3>Preprints</h3>
-            
-        <ol>
-            <li> The Chow Ring Classes of \(\mathrm{PGL}_3\) Orbit Closures in \(\mathbb{G}(1, 5)\). 2022. [<a href="http://arxiv.org/abs/2310.18571">arXiv</a>]
-        </ol>
-        
-        <h3>Articles in Preparation</h3>
-        <ol>
-            <li> Chow Classes of Varieties of Secant and Tangent Lines to a Projective Variety. Advisor: <a href="https://math.berkeley.edu/~hlarson/">Hannah Larson</a>.
-            <li> The Atiyah-Singer-Grothendieck-Hirzebruch-Riemann-Roch Theorem. Senior Thesis, due March 2024. Advisors: <a href="https://people.math.harvard.edu/~dafr/">Dan Freed</a> and <a href="https://www.math.harvard.edu/people/harris-joe/">Joe Harris</a>.
-            
-        </ol>
-        
-        <h3>Expository Writings</h3>
-        
-        <ol>
-            <li> <a href="Other_Writings/Clifford_Algebras_and_Spin_Groups.pdf">An Introduction to Clifford Algebras and Spin Groups</a>, December 2023.
-            <li> <a href="Other_Writings/Some_Genera_Computations.pdf">Some Genera Computations</a>, December 2023.
-            <li> <a href="Other_Writings/Elliptic_K3_Surfaces.pdf">Elliptic K3 Surfaces</a>, May 2023.
-            <li> <a href="Other_Writings/Hamiltonian_Actions_and_Marsden-Weinstein-Meyer_Reduction.pdf">Hamiltonian Actions and Marsden-Weinstein-Meyer Reduction</a>, May 2022.
-            <li> <a href="Other_Writings/Symplectic_Geometry_and_Hamiltonian_Mechanics.pdf">Symplectic Geometry and Hamiltonian Mechanics</a> (with Charley Hutchison), December 2021.
-            <li> <a href="Other_Writings/Covariant_Derivatives_Connections_Curvature.pdf">Covariant Derivatives, Connections, and Curvature</a>, December 2021.
-            <li> <a href="Other_Writings/Character_Table_of_Nonabelian_Group_of_Order_pq.pdf">The Character Table of the Nonabelian Group of Order \(pq\)</a>, December 2020.
-            <li> <a href="Other_Writings/Introduction_to_Modular_Jacobians.pdf">An Introduction to Modular Jacobians</a>, August 2020.
-            <li> <a href="Other_Writings/Grassmannian_and_Schubert_Cell_Decomposition.pdf">The Grassmannian and its Schubert Cell Decomposition</a>, December 2019.
-            <li> <a href="Other_Writings/Rectangular_Circumhyperbolae.pdf">Rectangular Circumhyperbolae</a>, April 2019.
-                
-        </ol>
-        
-        <h3>Other Writings</h3>
-        
-        <ol>
-            <li> <a href="Other_Writings/A_Second_Course_in_Commutative_Algebra.pdf">A Second Course in Commutative Algebra</a>, an incomplete collection of lecture notes based on Math 221: Commutative Algebra taught by <a href="https://people.math.harvard.edu/~mpopa/">Mihnea Popa</a> in Fall 2020.
-            <li> <a href="Other_Writings/A_Second_Course_in_Real_Analysis.pdf">A Second Course in Real Analysis</a>, an incomplete collection of lecture notes on real analysis.
-            <li> <a href="Other_Writings/Representation_Theory_Notes.pdf">Representation Theory Review Notes</a>, a collection of notes on representation theory based on the first three chapters of <em>Representation Theory: A First Course</em> by Fulton and Harris that I used for my review sections for Math 55A, Fall 2022.
-            <li> <a href="Other_Writings/Math_57_Notes.pdf">Math 57 Notes</a>, a collection of lecture notes on group theory for a course for high schoolers I designed and taught in 2020 as part of the Math Online Summer Program (MOSP) organized by <a href="https://sites.google.com/view/alecsun/home">Alec Sun</a>.
-        </ol>
-        <hr>
-        
-        <h2>Teaching and Mentorship</h2>
-        
-        <h3>Teaching Experiences</h3>
-        <ul>
-            <li> In the Spring 2024 semester, I am a course assistant (CA) for <b>Math 222: Lie Groups and Lie Algebras</b> taught by <a href="https://people.math.harvard.edu/~elkies/">Noam D. Elkies</a>.
-            <li> In the past at Harvard, I have been a CA for:
-                <ol>
-                    <li> <b>Math 213A: Advanced Complex Analysis</b> taught by <a href="https://people.math.harvard.edu/~ctm/">Curt McMullen</a> in Fall 2023 (<a href="https://people.math.harvard.edu/~ctm/math213a/index.html">Course Website</a>);
-                    <li> <b>Math 129: Number Fields</b> taught by <a href="https://people.math.harvard.edu/~tayou/">Salim Tayou</a> in Spring 2023;
-                    <li> <b>Math 114: Analysis of Function Spaces, Measure, and Integration</b> taught by <a href="https://people.math.harvard.edu/~htyau/">H. T. Yau</a> in Fall 2022;
-                    <li> <b>Math 132: Differential Topology</b> taught by <a href="https://people.mpim-bonn.mpg.de/gaitsgde/index.html">Dennis Gaitsgory</a> in Spring 2022; and
-                    <li> <b>Math 55A: Honors Group Theory and Linear Algebra</b>, taught by <a href="https://people.math.harvard.edu/~auroux/">Denis Auroux</a> in Fall 2022.
-                </ol>
-            <li> In Summer 2021, I was a counselor at <a href="https://rossprogram.org/">Ross Mathematics Program USA</a> and a CA for the advanced course on arithmetic geometry aimed at counselors titled <b>Rational Points on Curves</b> taught by <a href="https://people.math.osu.edu/patrikis.1/">Stefan Patrikis</a>.
-            <li> In Summer 2020, I was the course head for Math 57, an introductory course in group theory aimed at high schoolers (see the lecture notes above).
-        </ul>
-        
-        <h3>Philosophy</h3>
-        
-                
-        <b> I firmly believe that the best math is done together, and math can only be done together when everyone feels welcome, supported, and empowered to contribute. There is plenty of math for everyone, and it is the responsibility of all math students and educators to convince the world of that.</b>
-        
-            <hr>
-        <h2>Talks</h2>
-        
-        <h3>Contributed Talks</h3>
-        
-        <ol>
-            <li> “<b>On Powerful Integers Expressible as Sums of Two Coprime Fourth Powers</b>”, Fifteenth Algorithmic Number Theory Symposium, ANTS-XV, University of Bristol, August 2022. <a href="https://youtu.be/LXT83ozuoZw">Here</a> is a recording, and <a href="Presentation_Slides/ANTS_2022_Presentation.pdf">here</a> are the slides.
-        </ol>
-        
-        <h3>Other Talks/Seminars</h3>
-        <ol>
-            <li> “<b>Emmy Noether: Mathematician Extraordinaire</b>”, Harvard-MIT Mathematics Tournament (HMMT) Education Session, November 2022.
-            <li> “<b>The Three Sphere in Dante's <em>Divine Comedy</em></b>”, HMMT Education Session, February 2022.
-            <li> “<b>The Inverse [Quadratic] Central Potential and the Cubic Equation</b>”, Harvard Society of Physics Students (SPS), Undergraduate Chalk Talks Series, November 2021.
-            <li> “<b>Galois Cohomology and Hilbert's Theorem 90</b>”, Dorm Lecture, Ross Program USA, August 2021.
-            <li> “<b>What is Algebraic Geometry and Why Do We Care?</b>”, HMMT Education Session, November 2020.
-            <li> “<b>Fermat's Little Theorem and Applications to Cryptography</b>”, Harvard University Math Table, October 2019.
-        </ol>
-        
-        
-        <hr>
-        <h2>Miscellaneous</h2>
-        
-        <h3>Organizations</h3>
-        
-        <ul style="list-style-type:disc;">
-            <li> I am a member of the <a href="https://memorialchurch.harvard.edu/harvard-university-choir">Harvard University Choir</a> since August 2022 and a <a href="https://memorialchurch.harvard.edu/ferris-fellows">Ferris Choral Fellow</a> for the AY 2023-24.
-            <li> I am a member of the <a href="https://harvardgleeclub.org/">Harvard Glee Club</a> since August 2019.
-            <li> I was a member of <a href="https://harvardgiim.org/">Harvard Undergraduate Gender Inclusivity in Mathematics (HUGIIM)</a> from August 2021 to May 2023. I served as the Co-President for AY 2022-23, and as the Mentorships Co-Chair for the AY 2021-22.
-        </ul>
-        
-        <h3>Compositions</h3>
-        
-        I am a member of the <a href="https://www.singatharvard.com/hcnmi.html">Harvard Choruses New Music Initiative</a> since August 2022, as part of which I have written the following:
-        
-        <ol>
-            <li> <a href="Compositions/Daffodils_Score.pdf">Daffodils</a>, a setting of Wordsworth's poem <em> I Wandered Lonely as a Cloud </em> for the Harvard Glee Club.
-            <li> <a href="Compositions/I_Sing_Because_I_Can_Final.pdf">I Sing Because I Can</a> for <a href="https://www.singatharvard.com/ccv.html">Cambridge Common Voices</a>.
-        </ol>
-        
-        As part of my final project for Music 51B: Theory Ib offered at Harvard in Spring 2021, I wrote a piece for a string quartet, titled <a href="Compositions/You_Are_What_You_Sing.pdf">You Are What You Sing</a>, which was premiered by the <a href="https://parkerquartet.com/">Parker Quartet</a>.
-        <h3> Other Performances </h3>
-        
-        In February 2022, I played the baritone role of Bard in the premier of Harry Sage's <em>If a Picture Never Lies</em>, an operatic adaptation of Virgil's <em>Bucolics</em>, Eclogues 1, 2, and 9. The Harvard Crimson <a href="https://www.thecrimson.com/article/2022/3/4/if-a-picture-never-lies-feature/">published an article about it</a>.
-
-  </div>
+    </div>
 </body>
 </html>
+
