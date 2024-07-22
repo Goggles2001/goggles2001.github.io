@@ -14,20 +14,61 @@
                 color: #333333;
             }
             .navbar {
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                background-color: #004d40;
-                padding: 1em;
-            }
+            display: flex;
+            justify-content: space-between; /* Ensures equal spacing between items */
+            align-items: center;
+            background-color: #004d40;
+            padding: 0.5em; /* Added padding to provide more space */
+            flex-wrap: wrap; /* Allows wrapping of items if necessary */
+        }
             .navbar a {
-                color: white;
-                text-decoration: none;
-                font-weight: bold;
-            }
-            .navbar a:hover {
-                text-decoration: underline;
-            }
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            flex: 1; /* Flexible width to fill the space equally */
+            text-align: center; /* Centers the text within each flex item */
+            white-space: nowrap; /* Prevents breaking lines */
+            padding: 0.5em 1em; /* Added padding for spacing */
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown > a::after {
+            content: "";
+            display: inline-block;
+            margin-left: 8px;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid white;
+            transform: translateY(-4px); /* Adjust to align the arrow vertically */
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #004d40;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            min-width: 160px;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #333333;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
             .content {
                 display: flex;
                 justify-content: space-between;
@@ -48,6 +89,7 @@
             p.big {
                 line-height: 1.5;
             }
+        
             .section-style {
                 margin: 2em 0;
             }
@@ -63,13 +105,17 @@
 <body>
     <!-- Navigation Bar -->
     <div class="navbar">
-        <a href="index.html">Main</a>
+        <a href="index.html">Home</a>
         <a href="cv.html">CV</a>
         <a href="writings.html">Writings & Publications</a>
         <a href="talks.html">Talks</a>
-        <a href="teaching.html">Teaching & Mentorship</a>
+        <div class="dropdown">
+            <a href="teaching.html">Teaching & Mentorship</a>
+            <div class="dropdown-content">
+                <a href="curves.html">Curves @ Ross/Ohio 2024</a>
+            </div>
+        </div>
         <a href="misc.html">Miscellaneous</a>
-        <a href="curves.html">Curves</a>
     </div>
     <!-- Container for Research and Publications Page Content -->
     <div class="container">
@@ -80,11 +126,10 @@
         Basic information:
         <ul>
             <li><b>Instructor</b>: Dhruv Goel [<tt><a href="mailto:gauravgoel@college.harvard.edu">gauravgoel@college.harvard.edu</a></tt>]
-            <li><b>Meeting Times and Locations</b>: 4:30 - 5:30 pm on MWF, in Roush 114 (first week only; location starting the second week TBD).
-            <li><b>Office Hours</b>: TBD
+            <li><b>Meeting Times and Locations</b>: See the Ross Calendar for updated times and locations.
             <li><b>Topics Covered</b>: <em>The course topics will be adjusted based on the backgrounds and interests of the participants.</em> A tentative list of topics can be found <a href="curves.html#topics">below</a>.
             <li><b>Texts/References</b>: I will type up <a href="curves.html#notes">my own lecture notes</a>. For other references, see <a href="curves.html#references">the section below</a>.
-            <li><b>Prerequisites</b>: The only real prerequisite is familiarity with the fundamentals of ring/field theory (prime and irreducible elements, ideals, algebraically closed fields). Familiarity with linear algebra and topology will occasionally be useful, but is not required.<sup><a href="#fn2" id="ref2">2</a></sup>
+            <li><b>Prerequisites</b>: Familiarity with the material on the Ross first-year sets, up to and including topics such as prime and irreducible elements, ideals, and algebraically closed fields. Familiarity with linear algebra and topology will occasionally be useful, but is not required.<sup><a href="#fn2" id="ref2">2</a></sup>
             <li><b>Assignments and Collaboration Policy</b>: There are no formal assignments, although I will produce <a href="curves.html#exercises">weekly exercise sheets</a>. You do not need to turn in solutions, but you are welcome to discuss your solutions with me as well. You are highly encouraged to read the <a href="curves.html#notes">lecture notes</a> carefully and to attempt each problem in the exercise sheets by yourself, having done which, collaboration and discussion with your peers is highly welcome and encouraged.
             <li><b>Graphing</b>: You are highly encouraged to make full use of wonderful graphing software such as <a href="https://www.desmos.com/">Desmos</a> and <a href="https://www.wolframalpha.com/">WolframAlpha</a> to make your experience in this course more enjoyable.
         </ul>
@@ -114,7 +159,7 @@
                     <li> Classification of projective cubic curves and introduction to elliptic curves (e.g. associativity of group law)
                 </ol>
                 Further topics (if time permits) might include:
-                <ol>
+                <ol start = 9>
                     <li> Topology of real plane curves (connected components, convexity, nesting, Harnack's Theorem)
                     <li> Inflection points, polars and Hessians
                     <li> Pencils of conics, parameter spaces, solving the quartic equation using algebraic geometry
@@ -123,9 +168,11 @@
                     <li> More singularity theory: conductors, knots, etc.
                 </ol>
                 
+                <b>Update 07/22/24</b>: The course covered topics 1-8, 11, and 12.
                 <section class="section-style" id="notes">
                 <h2>Lecture Notes</h2>
                 
+                Lecture notes will be updated <em>after</em> the corresponding lecture. Here is the <a href="Curves/Full.pdf">full file (including exercises)</a>, last updated on 07/15/24. Here are the notes sorted by lecture:
                 Lecture notes will be updated <em>after</em> the corresponding lecture. Here is the <a href="Curves/Full.pdf">full file (including exercises)</a>, last updated on 07/15/24. Here are the notes sorted by lecture:
                 <ul>
                     <li><a href="Curves/Lecture1.pdf">Lecture 1</a>; posted on 06/10/24; introduction
@@ -141,8 +188,8 @@
                     <li><a href="Curves/Lecture11.pdf">Lecture 11</a>; posted on 07/03/24 [delayed to 07/10/24]; projective duality, (de)homogenization, projective nullstellensatz
                     <li><a href="Curves/Lecture12.pdf">Lecture 12</a>; posted on 07/05/24 [delayed to 07/10/24]; projective changes of coordinates, multiplicity and smoothness, classification of projective conics
                     <li><a href="Curves/Lecture13.pdf">Lecture 13</a>; posted on 07/08/24 [delayed to 07/15/24]; parametric projective curves, pascal's theorem, more on conics
-                    <li><a href="Curves/Lecture14.pdf">Lecture 14</a>; posted on 07/10/24 [delayed to 07/15/24]; proof(s) of bézout's theorem
-                    <li><a href="Curves/Lecture15.pdf">Lecture 15</a>; posted on 07/12/24 [delayed to 07/15/24]; more applications, pencils of curves, introduction to elliptic curves
+                    <li><a href="Curves/Lecture14.pdf">Lecture 14</a>; posted on 07/08/24 [delayed to 07/15/24]; proof(s) of bézout's theorem
+                    <li><a href="Curves/Lecture15.pdf">Lecture 15</a>; posted on 07/08/24 [delayed to 07/15/24]; more applications, pencils of curves, introduction to elliptic curves
                     <li>Lecture 16; to be posted on 07/15/24; [TBD]
                     <li>Lecture 17; to be posted on 07/17/24; [TBD]
                 </ul>
@@ -157,11 +204,11 @@
                 
                 <ul>
                     <li><a href="Curves/Sheet1.pdf">Exercise Sheet 1</a>; posted on 06/10/24
-                    <li><a href="Curves/Sheet2.pdf">Exercise Sheet 2</a>; posted on 06/17/24
-                    <li><a href="Curves/Sheet3.pdf">Exercise Sheet 3</a>; posted on 06/24/24
-                    <li><a href="Curves/Sheet4.pdf">Exercise Sheet 4</a>; posted on 07/01/24 [delayed to 07/02/24]
-                    <li><a href="Curves/Sheet5.pdf">Exercise Sheet 5</a>; posted on 07/08/24
-                    <li><a href="Curves/Sheet6.pdf">Exercise Sheet 6</a>; posted on 07/15/24
+                        <li><a href="Curves/Sheet2.pdf">Exercise Sheet 2</a>; posted on 06/17/24
+                        <li><a href="Curves/Sheet3.pdf">Exercise Sheet 3</a>; posted on 06/24/24
+                        <li><a href="Curves/Sheet4.pdf">Exercise Sheet 4</a>; posted on 07/01/24 [delayed to 07/02/24]
+                        <li><a href="Curves/Sheet5.pdf">Exercise Sheet 5</a>; posted on 07/08/24
+                        <li><a href="Curves/Sheet6.pdf">Exercise Sheet 6</a>; posted on 07/15/24
                 </ul>
                 </section>
 
@@ -180,9 +227,10 @@
             <li> Fulton's textbook titled <em>Algebraic Curves: An Introduction to Algebraic Geometry</em>, legally available for free <a href="https://dept.math.lsa.umich.edu/~wfulton/CurveBook.pdf">here</em></a>.
                 <li> Harris's textbook titled <a href="https://link.springer.com/book/10.1007/978-1-4757-2189-8"><em>Algebraic Geometry: A First Course</em></a>. (Disclaimer: I'm slightly biased in my choices, since Harris was my advisor.)
         </ol>
-        For a much more encyclopaedic but still fairly accessible treatment, I would recommend:
+        For much more encyclopaedic, somewhat outdated, but still fairly accessible treatments, I would recommend:
         <ol start = 6>
             <li>The book by Brieskorn and Knörrer titled <a href="https://link.springer.com/book/10.1007/978-3-0348-5097-1"><em>Plane Algebraic Curves</em></a>.
+            <li>The book by Walker titled <a href="https://link.springer.com/book/9780387903613"><em>Algebraic Curves</em></a>.
         </ol>
         
         If you need assistance in accessing any of these references, please do not hesitate to reach out to me.

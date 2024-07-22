@@ -15,18 +15,59 @@
         }
         .navbar {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between; /* Ensures equal spacing between items */
             align-items: center;
             background-color: #004d40;
-            padding: 1em;
+            padding: 0.5em; /* Added padding to provide more space */
+            flex-wrap: wrap; /* Allows wrapping of items if necessary */
         }
         .navbar a {
             color: white;
             text-decoration: none;
             font-weight: bold;
+            flex: 1; /* Flexible width to fill the space equally */
+            text-align: center; /* Centers the text within each flex item */
+            white-space: nowrap; /* Prevents breaking lines */
+            padding: 0.5em 1em; /* Added padding for spacing */
         }
         .navbar a:hover {
             text-decoration: underline;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown > a::after {
+            content: "";
+            display: inline-block;
+            margin-left: 8px;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid white;
+            transform: translateY(-4px); /* Adjust to align the arrow vertically */
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #004d40;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            min-width: 160px;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #333333;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
         .content {
             display: flex;
@@ -62,13 +103,17 @@
 <body>
     <!-- Navigation Bar -->
     <div class="navbar">
-        <a href="index.html">Main</a>
+        <a href="index.html">Home</a>
         <a href="cv.html">CV</a>
         <a href="writings.html">Writings & Publications</a>
         <a href="talks.html">Talks</a>
-        <a href="teaching.html">Teaching & Mentorship</a>
+        <div class="dropdown">
+            <a href="teaching.html">Teaching & Mentorship</a>
+            <div class="dropdown-content">
+                <a href="curves.html">Curves @ Ross/Ohio 2024</a>
+            </div>
+        </div>
         <a href="misc.html">Miscellaneous</a>
-        <a href="curves.html">Curves</a>
     </div>
     <div class="container">
         <h1>Miscellaneous</h1>
